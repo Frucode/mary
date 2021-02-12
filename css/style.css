@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px; }
+
+body::-webkit-scrollbar {
+  width: 4px; }
+
+body::-webkit-scrollbar-thumb {
+  background: whitesmoke;
+  border-radius: 5px; }
+
+body::-webkit-scrollbar-track {
+  background: black; }
+
+.cabecera-inicial {
+  background: url("../assets/imagen1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: blue;
+  height: 100vh; }
+
+.wrap {
+  height: auto;
+  background-color: wheat; }
+
+.card-footer {
+  background-color: white; }
+  .card-footer .btn:hover {
+    transition: linear 0.2s;
+    border-color: blanchedalmond;
+    background-color: black;
+    color: red;
+    font-weight: 600;
+    color-interpolation-filters: auto; }
+
+.container {
+  row-gap: 15px;
+  column-gap: 10px;
+  margin-bottom: 2rem; }
+
+.contenedor {
+  flex-wrap: wrap;
+  margin: 3rem;
+  height: 100vh;
+  font-family: monospace;
+  overflow: hidden; }
+  .contenedor > * {
+    padding: 50px; }
+  .contenedor p {
+    size: 2rem;
+    justify-content: space-around;
+    padding: 1rem;
+    margin-top: 10px;
+    margin-right: 50px; }
+
+@media (max-width: 375px) {
+  .cabecera-inicial {
+    background: url("https://placekitten.com/320/660");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: blue;
+    height: 100vh; }
+  .contenedor {
+    margin: 0rem; }
+    .contenedor > * {
+      padding: 20px; }
+    .contenedor p {
+      margin: 0px;
+      size: 2rem;
+      justify-content: space-around;
+      padding: 0.5rem; }
+  .container {
+    justify-content: center; } }
+
+@media (min-width: 376px) {
+  /*     .navbar{
+        collapse;
+    } */
+  .contenedor {
+    margin: 0rem; }
+    .contenedor > * {
+      padding: 20px; }
+    .contenedor p {
+      margin: 0px;
+      size: 2rem;
+      justify-content: space-around;
+      padding: 0.5rem; }
+  .container {
+    justify-content: space-around; } }
+
+@media (min-width: 769px) {
+  .contenedor {
+    margin: 0rem; }
+    .contenedor > * {
+      padding: 20px; }
+    .contenedor p {
+      margin: 0px;
+      size: 2rem;
+      justify-content: space-around;
+      padding: 0.5rem; }
+  .container {
+    justify-content: space-around; } }
+
+@media (min-width: 1025px) {
+  .container {
+    justify-content: space-around; } }
+
+@media (min-width: 1201px) {
+  .container {
+    justify-content: space-around; } }
