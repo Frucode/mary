@@ -9,24 +9,18 @@
     <title>Blog</title>
 </head>
 <body>
-    <header class="wrap mb-3">
-        <!-- nav -->
-        <nav class="navbar">
-        <span class="navbar-brand justify-content-start" ><a href="index.html">Home</a></span>
-            <span class="navbar-brand justify-content-center">Logo</span>            
-            <ul class="nav justify-content-end">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./contacto.html">Contacto</a>
-                </li>
+    <!--     </header> -->
+    <div class="toggle" onclick="toggleMenu()"></div>
+    <div class="sidebar">           
+            <ul class="menu">
+                <li class=""><a class="" onclick="toggleMenu()" href="./index.html">Home</a></li>
+                <li class=""><a class="" onclick="toggleMenu()" href="./index.html">Conoceme</a></li>
+                <li class=""><a class="" onclick="toggleMenu()" href="#sobre-us">Conoceme</a></li>
+                <li class=""><a class="" onclick="toggleMenu()" href="./blog.html">El mazo</a></li>
+                <li class=""><a class="" onclick="toggleMenu()" href="#contacto">Contacto</a></li>
               </ul>
-        </nav>
-    </header>
+    </div>
+    <!-- Banner -->
     <div class="container row m-auto">
         <div class="card" style="width: 16rem;">
             <img src="https://placekitten.com/200/200" class="card-img-top" alt="...">

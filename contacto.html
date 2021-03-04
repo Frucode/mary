@@ -6,30 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Blog</title>
+    <title>Contacto</title>
 </head>
 <body>
-    <header class="wrap mb-3">
-        <!-- nav -->
-        <nav class="navbar">
-        <span class="navbar-brand justify-content-start" ><a href="index.html">Home</a></span>
-            <!-- <span class="navbar-brand justify-content-center">Logo</span>  -->           
-            <ul class="nav justify-content-end">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./blog.html">Blog</a>
-                </li>
-              </ul>
-        </nav>
-    </header>
+<!-- menu hamburguesa -->
+<div class="toggle" onclick="toggleMenu()"></div>
+<div class="sidebar">           
+        <ul class="menu">
+            <li class=""><a class="" onclick="toggleMenu()" href="#home">Home</a></li>
+            <li class=""><a class="" onclick="toggleMenu()" href="#sobre-us">Conoceme</a></li>
+            <li class=""><a class="" onclick="toggleMenu()" href="#sobre-us">Conoceme</a></li>
+            <li class=""><a class="" onclick="toggleMenu()" href="./blog.html">El mazo</a></li>
+            <li class=""><a class="" onclick="toggleMenu()" href="#contacto">Contacto</a></li>
+          </ul>
+</div>
+<!-- menu hamburguesa -->
 
         <!-- contacto -->
-        <form class="forma" method="POST">
+<!--         <form class="forma" method="POST">
             <div class="container">
             <h2 class="">Contacta con Mary</h2>
             <div class="row100">
@@ -62,13 +56,60 @@
                 </div>
                 <button type="submit">Enviar</button>
             </div>
+        </div>
+    </form> -->
+    <section class="contacto">
+        
+        <div class="tabla">
+            <h2></h2>
+            <div class="row100">
+                <div class="col">
+                <div class="inputbox">
+                    <input type="text" name="" required="required">
+                    <span class="text">Nombre</span>
+                    <span class="line"></span>
+                </div>
             </div>
-        </form>
-
+                <div class="col">
+                <div class="inputbox">
+                    <input type="text" name="" required="required">
+                    <span class="text">Apellido</span>
+                    <span class="line"></span>
+                </div>
+                </div>
+                <div class="col">
+                <div class="inputbox">
+                   <input type="text" name="" required="required">
+                   <span class="text">Email</span>
+                   <span class="line"></span>
+                </div>
+                </div>
+                <div class="col">
+                <div class="inputbox">
+                   <input type="text" name="" required="required">
+                   <span class="text">Telefono</span>
+                   <span class="line"></span>
+                </div>
+                </div>
+                <div class="col">
+                <div class="inputbox textarea">
+                    <textarea required="required"></textarea>
+                    <span class="text">Consulta</span>
+                    <span class="line"></span>
+                </div>
+                </div>
+            <div class="row100">
+                <div class="col">
+                    <input type="submit" value="Send">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- footer -->
-    <footer class="bg-light text-center mt-4">
-        <div class="mb-0 container p-4 col-sm-12 pb-0">
-            <form action="">
+<footer class="bg-light text-center mt-4">
+    <div class="mb-0 container p-4 col-sm-12 pb-0">
+        <form action="">
                 <!-- row -->
                 <div class="row">
                     <!-- column -->
