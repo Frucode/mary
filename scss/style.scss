@@ -1,3 +1,10 @@
+/*
+Trate de dejar cada sección separada dentro del archivo,
+sin embargo esto afecto terriblemente el funcionamiento 
+de la pagina, por lo que, aunque el archivo este separado
+en varias secciones comentadas esto no implica que el 100% del
+contenido este dentro de ellas.
+*/
 *{
     box-sizing: border-box;
     margin: 0px;
@@ -8,15 +15,26 @@
 body::-webkit-scrollbar{
     width: 4px;
 }
-
 body::-webkit-scrollbar-thumb{
     background: whitesmoke;
     border-radius: 5px;
 }
-
 body::-webkit-scrollbar-track{
     background: black;
 }
+.paRiba{
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 10;
+}
+
+/* ======================= Banner ====================*/
+
 .toggle{
     position: fixed;
     top: 30px;
@@ -75,7 +93,6 @@ section.testimonio {
     height: 100%;
     object-fit: cover;
 }
-
 .banner .cjdcontenido,
 .sidebar{
     position: absolute;
@@ -92,11 +109,23 @@ section.testimonio {
 .logoText{
     position: absolute;
     top: 40px;
+    left: 70px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    background-color: #333;
+    color: #fff;
+    text-transform: uppercase;
+}
+.logoMazo{
+    position: relative;
+    width: fit-content;
+    top: 40px;
     left: 100px;
     font-size: 1.2rem;
     letter-spacing: 1px;
     background-color: #333;
     color: #fff;
+    margin-bottom: revert;
     text-transform: uppercase;
 }
 .banner .cjdcontenido h4 {
@@ -162,6 +191,9 @@ p{
 .sidebar ul li a:hover{
     color: #8DB9E2;
 }
+
+/*============================ Fin de Banner========================== */
+
 .titulo{
     width: 100%;
     text-align: center;
@@ -219,30 +251,44 @@ p{
         background-color: #38023B;
         border-radius: 10px;
         box-shadow: 2px 10px 12px rgba(0,0,0,0.5);
-        display: flex;
+        display: flex;  
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
         box-sizing: border-box;
         margin: 20px 10px;
+        h2{
+            color:#A288E3;
+        }
+        h3{
+            margin-top: -45px;
+            color: #6d6c6d;
+            position: absolute;
+        }
     }
     .Foto{
-        height: 350px;
+        top: 80px;
+        position: absolute;
+        width: 150px;
+        height: 150px;
         max-height: 100%;
         max-width: 100%;
+        border-radius: 50%;
     }
     .detalles{
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 300px;
+        height: 40%;
     }
     .detalles p{
         font-family: calibri;
         font-weight: bold;
         color:#6a6a74;
-        text-align: center;
-        margin-top: 20px;
+        text-align: justify;
+        margin-top: -60px;
+
     }
     .Mary{
         color:#A288E3;
@@ -267,12 +313,26 @@ p{
     .caja:hover .detalles p{
         color: #fffceb;
     }
+    .caja:hover h3{
+        color: #5BC2C1 ;
+    }
+    .caja:hover .Foto{
+        top: 60px;
+        position: absolute;
+    }
 }
-/* .carousel-item{
-    margin-right: auto;
-} */
+
+/* ============================= Fin de Testimonio ====================== */
+
+/* ============================= Conóceme ======================== */
+
 .sobre-us{
     background: #38023B;
+    &>p{
+        color: rgb(201, 240, 245);
+        font-weight: 300;
+        font-style: italic;
+    }
 }
 .sobre-us .contenido {
     display: flex;
@@ -285,38 +345,22 @@ p{
 }
 .sobre-us .contenido .cjdtexto p{
     color: #5BC2C1;
+    text-align: justify;
 }
-.sobre-us .contenido .cjdimg
-{
+.sobre-us .contenido  .cjdimg{
     margin-left: 40px;
 }
 .sobre-us .contenido .cjdimg img{
     width: 500px;
     min-height: 100%;
 }
-.swiper-container {
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+.sobre-us .contenido .tirada-img img{
+    width: 500px;
+    min-height: 100%;
+    padding: 50px;
 }
-
-.swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 300px;
-    height: 300px;
-    background-color: #fff;
-}
-.cabecera-inicial{
-    background: url("../assets/imagen1.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-color: blue;
-    height: 100vh;
-}
-.wrap{
-    height: auto;
-    background-color: wheat;
+.card{
+    border: solid 2px wheat ;
 }
 .card-footer{
     background-color: white;
@@ -337,7 +381,76 @@ section.contacto{
     align-items: center;
     min-height: 100vh;
     background: #333;
+    .titulo.blanco h2, .titulo.blanco p{
+        color: #5BC2C1 ;
+    }
+    .titulo h2::before{
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 6px;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #5BC2C1;
+    }
 }
+.tdTarot{
+    background-color: #38023B;
+    .titulo.blanco h2, .titulo.blanco p{
+        color: #5BC2C1 ;
+    }
+    .titulo h2::before{
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 6px;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #5BC2C1;
+    }
+}
+.sobre-us.eleccion{
+    background-color: #5BC2C1;
+    .titulo.blanco h2, .titulo.blanco p{
+        color: #38023B ;
+    }
+    .titulo h2::before{
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 6px;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #38023B;
+    }
+    .contenido .cjdtexto p{
+        color: #38023B;
+    }
+}
+/* .tdTarot .contenido {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.tdTarot .contenido .cjdtexto{
+    min-width: 49%;
+    width: 49%;
+}
+.tdTarot .contenido .cjdtexto p{
+    display: block;
+    color: #5BC2C1;
+    text-align: justify;
+}
+.tdTarot .contenido .cjdimg{
+    margin-left: 40px;
+}
+.tdTarot .contenido .cjdimg img{
+    min-width: 100%;
+    height: 160px; 
+} */
 .tabla{
     width: 80%;
     padding: 20px;
@@ -349,10 +462,10 @@ section.contacto{
     margin-bottom: 10px;
 }
 .tabla .row100{
+    margin-top: 70px;
     position: relative;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat (auto-fit,minmax(300px,1fr));
 }
 .tabla .row100 .col{
     position: relative;
@@ -451,24 +564,9 @@ input:hover[type="submit"]{
     column-gap: 10px;
     margin-bottom: 2rem;
 }
-
-.contenedor{
-    flex-wrap: wrap;
-    margin: 3rem;
-    height: 100vh;
-    font-family: monospace;
-    overflow: hidden;
-    > *{
-        padding: 50px;
+.container.row{
+    padding-top: 2rem;
     }
-    p{
-        size: 2rem;
-        justify-content: space-around;
-        padding: 1rem;
-        margin-top: 10px;
-        margin-right: 50px;
-    }
-}
 .forma{
     width: 55%;
     display: flex;
@@ -485,81 +583,146 @@ input:hover[type="submit"]{
 }
 footer{
     bottom: 0;
+    width: 100%;
 }
-@media(max-width: 375px){
-    .cabecera-inicial{
-        background: url("https://placekitten.com/320/660");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        background-color: blue;
-        height: 100vh;
+.carousel{
+    width: 400px;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    margin-right: 49%;
+}
+.card-title a{
+    color: #A288E3;
+}
+.card-title:hover a{
+    color: #8DB9E2;
+}
+.articulo{
+    padding-top: 50px;
+    margin: auto;
+    text-align: justify;
+    overflow: scroll;
+    overflow-x: hidden;
+    h1, h2, h3, h4, h5, h6{
+        text-align: left;
     }
-    .contenedor{
-        margin: 0rem;
-        > *{
-            padding: 20px;
-        }
-        p{
-            margin: 0px;
-            size: 2rem;
-            justify-content: space-around;
-            padding: 0.5rem;
-        }
+    h1, p{
+        width: 70%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 50px;
+    }
+}
+.articulo h4 {
+    color: #333;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+.articulo h4 span{
+    color: #8DB9E2;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.topeArticulo{
+    margin-top: -100px;
+    h6{
+        font-weight: 300;
+    }
+    i{
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+    hr{
+        margin-top: -0.9rem;
+    }
+}
+/* ================== Media Query ======================== */
+@media(max-width: 319px){
+    .toggle {
+        right: 20px;
+    }
+    .sidebar{
+        width: 100%;
+    }
+    .articulo{
+        padding: 5px;
+    }
+    section.testimonio {
+        padding: 60px;
+    }
+}
+@media (min-width: 320px) and (max-width: 376px){
+    .toggle {
+        right: 20px;
+    }
+    section.testimonio {
+        padding: 60px;
     }
     .container{
         justify-content: center;
+    } 
+    .articulo.cjdcontenido{
+        .logoText{
+            font-size: 2em;
+        }
+    }   
+    .sidebar{
+        width: 100%;
+    }
+    .logoMazo{
+        left: 10px;
+    }
+}
+@media (min-width: 377px) and (max-width: 576px){
+    .container, .container-sm{
+    max-width: 540px;
+    justify-content: center;
+    }
+    .articulo.cjdcontenido{
+        .logoText{
+            font-size: 2em;
+        }
+    }
+    .sidebar{
+        width: 100%;
+    }
+    .logoMazo{
+        left: 10px;
+    }
+}
+@media (max-width: 577px){
+    section.testimonio {
+        padding: 60px;
+    }
+    .carousel {
+        width: 300px;
+    }
+    .testimonio .caja {
+        width: 85%;
+    }
+    .testimonio .Foto {
+        display: none;
+    }
+    .testimonio .detalles {
+        width: 80%;
+        height: 70%;
+    }
+    .tabla .row100{
+        margin-top: 20px;
     }
 }
 
-@media(min-width: 320px){
-    .sidebar{
-        width: calc(100% - 100px);
-    }
-}
-@media(max-width: 376px){
-    .sidebar{
-        width: calc(100% - 180px);
-    }
-    .contenedor{
-        margin: 0rem;
-        > *{
-            padding: 20px;
-        }
-        p{
-            margin: 0px;
-            size: 2rem;
-            justify-content: space-around;
-            padding: 0.5rem;
-        }
-    }
-    .container{
-        justify-content: space-around;
-    }
-}
-@media(min-width: 769px){
-    .sidebar{
-        width: calc(100% - 280px);
-    }
-    .contenedor{
-        margin: 0rem;
-        > *{
-            padding: 20px;
-        }
-        p{
-            margin: 0px;
-            size: 2rem;
-            justify-content: space-around;
-            padding: 0.5rem;
-        }
-    }
-    .container{
-        justify-content: space-around;
-    }
-}
-@media(max-width:720px){
+@media (min-width: 577px) and (max-width:720px){
     .caja{
         width: 94%;
         height: 500px;
+    }
+    .articulo.cjdcontenido{
+        .logoText{
+            font-size: 2em;
+        }
     }
     .Foto{
         height:250px;
@@ -568,15 +731,33 @@ footer{
         font-size: 16px;
         width: 250px;
     }
-    
-}
-
-@media(max-width: 991px){
-    .banner .imgsidebar {
-        display: none;
-    }
-    .banner .cjdcontenido, .sidebar{
+    .sidebar{
         width: 100%;
+    }
+}
+@media (min-width: 721px) and (max-width: 768px){
+    .sidebar{
+        width: 100%;
+    }
+    .articulo.cjdcontenido{
+        .logoText{
+            font-size: 2em;
+        }
+    }
+    .container, .container-md{
+        justify-content: center;
+        justify-content: space-around;
+        min-width: 720px;
+    }
+}
+@media (min-width: 769px) and (max-width: 992px){
+    .container, .container-sm, 
+    .container-md, .container-lg {
+    max-width: 960px;
+    justify-content: center;
+    }
+    .toggle{
+        right: 40px;
     }
     .logoText{
         left: 40px;
@@ -600,13 +781,91 @@ footer{
         margin-left: 0;
     }
 }
-@media(min-width: 1025px){
+@media (max-width: 991px){
+    .articulo.cjdcontenido{
+        .logoText{
+            font-size: 2em;
+        }
+    }
+    section.contacto{
+        padding: 0;
+    }
+    section.tdTarot {
+        padding: 40px;
+    }
+    .banner{
+        min-width: 100%;
+    }
+    .banner .imgsidebar {
+        display: none;
+    } 
+    .banner .cjdcontenido, .sidebar{
+        width: 100%;
+        padding: 40px;
+    }
+    .logoText{
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        text-align: justify;
+    }
+    section.sobre-us{
+        padding: 40px;
+    }
+    .sobre-us .contenido{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0px;
+        flex-direction: column;
+    }
+    .sobre-us .contenido .cjdtexto{
+        min-width: 100%;
+        width: 100%;
+    }
+    .sobre-us .contenido .cjdimg img{
+        margin-left: 0px;
+        width: 100%;
+    }
+    .tdTarot .contenido .cjdimg img{
+        margin-left: 0px;
+        width: 100%;
+    }
+    .tirada-img img{
+        margin-left: 0px;
+        width: 90%;
+    }
+}
+@media (min-width: 1005px) and (max-width: 1070px){
     .container{
         justify-content: space-around;
     }
+    .tirada-img img{
+        margin-left: 0px;
+        width: 90%;
+    } 
+    .sobre-us .contenido .cjdimg img {
+        margin-left: 0px;
+    }
+    .tdTarot .contenido .cjdimg img {
+        margin-left: 0px;
+        width: 100%;
+    }
+    .sobre-us.eleccion .contenido{
+        .cjdimg{
+            margin-left: 0px;
+            width: 35%;
+        }
+    }.sobre-us .contenido .cjdimg img {
+        width: 450px;
+        min-height: 85%;
+    }
 }
 @media(min-width: 1201px){
-    .container{
+    .container, .container-sm, .container-md, .container-lg{
         justify-content: space-around;
+        min-width: 1160px;
+    }
+    footer{
+        position: static;
     }
 }

@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Pagina para el tarot y la lectura de cartas tipos de tirada">
+    <meta name="keywords" content="tarot, cartas, mazo, esotrismo">
+    <meta name="author" content="Alejandro del Río">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -9,10 +12,109 @@
     <title>Saber más</title>
 </head>
 <body>
+    <!-- Toggle -->
+    <div class="toggle" onclick="toggleMenu()"></div>
+    <div class="sidebar">           
+            <ul class="menu">
+                <li class=""><a class="" onclick="toggleMenu()" href="./index.html">Home</a></li>
+                <li class=""><a class="" onclick="toggleMenu()" href="./el_mazo.html">El mazo 🎴</a></li>
+                <li class=""><a class="" onclick="toggleMenu()" href="./contacto.html">Contacto</a></li>
+                <li class=""><a class="" onclick="toggleMenu()" href="#heroe">Héroe</a></li>
+                <li class=""><a class="" onclick="toggleMenu()" href="#eleccion">Elección</a></li>
+                <li class=""><a class="" onclick="toggleMenu()" href="#mundo">Mundo</a></li>
+            </ul>
+    </div>
+    <!--Fin de Toggle -->
+    <!-- Banner -->
+    <section class="banner" id="home">
+        <div class="imgsidebar">
+            <img src="./assets/Mesa.jpg">
+        </div>
+        <div class="cjdcontenido articulo">
+            <h5 class="logoText">
+                Saber más
+            </h5>
+            <div class="topeArticulo">
+                <h4><span>Diferencia entre:</span></h4>
+                <h2>Tarot Evolutivo y Tarot Adivinatorio</h2><br><br>
+                <p>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; En el Tarot adivinatorio el/la consultante es un niño que busca en papá/mamá 
+                    tarotista un consejo, regañina o advertencia sobre lo que le depara el futuro 
+                    (que no deja de ser una repetición del pasado cuando se tiene un nivel de conciencia 
+                    bajo) donde todo escapa a su responsabilidad como adulto para afrontar el presente 
+                    como semilla de lo que acontecerá.
+                    <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; En el Tarot evolutivo las preguntas se realizan en presente y se busca 
+                    reconciliar los aspectos inconscientes con los conscientes, para conseguir que ambos caballos tiren el 
+                    carro en la misma dirección, y no en sentido opuesto. Entonces no se plantean preguntas del tipo “¿Cuándo 
+                    encontraré novi@” sino “Estoy buscando pareja y constantemente todos mis intentos fracasan ¿Por qué no la 
+                    encuentro?” remitiendo al consultante al momento actual y mostrándole un espejo que refleja su traba, que 
+                    sólo el/ella puede. </p><br><br>
+            </div>
+        </div>
+    </section>
 
+    <!-- Fin Banner -->
 
-<div class="toggle" onclick="toggleMenu();"></div>
+    <!-- contenido -->
+    <!-- Heroe -->
+    <section class="sobre-us" id="heroe">
+        <div class="titulo blanco">
+            <h2>Héroe</h2>
+        </div>
+        <div class="contenido">
+            <div class="cjdtexto">
+                <p>
+                    1.- El consultante elige primero una carta que represente su situación de partida (A).
+                    <br> 2.- Luego otra que indique su meta o el objeto de su búsqueda (B).
+                    <br> 3.- Entre ambas cartas se colocan otras dos (C y D), juntas, que representan el obstáculo que hay que superar para llegar al objetivo.
+                </p>
+            </div>
+            <div class="tirada-img">
+                <img src="./assets/heroe.png" alt="Tirada de tarot del Heroe">
+            </div>
+        </div>
+    </section>
 
+    <!-- Fin de Heroe -->
+
+    <section class="sobre-us eleccion" id="eleccion">
+        <div class="titulo blanco">
+            <h2>Elección</h2>
+        </div>
+        <div class="contenido">
+            <div class="cjdtexto">
+                <p>
+                    1.- El consultante saca una carta central que lo simboliza.<br>
+                    2.- Se le pide luego que visualice una vía a la derecha de esa carta y otra a la izquierda.<br>
+                    3.- A cada una de estas dos cartas se añade otro dúo de cartas que permita precisar las posibilidades que se ofrecen para cada una de esas vías.
+                </p>
+            </div>
+            <div class="cjdimg">
+                <img src="./assets/eleccion.png" alt="Tirada de tarot de la eleccion">
+            </div>
+        </div>
+    </section>
+    <section class="sobre-us" id="mundo">
+        <div class="titulo blanco">
+            <h2>Mundo</h2>
+        </div>
+        <div class="contenido">
+            <div class="cjdtexto">
+                <p>
+                    1.- La carta (A) representa al consultante.<br>
+                    2.- La carta (B) representa el estado de su energía intelectual.<br>
+                    3.- La carta (C) representa el estado de su energía emocional.<br>
+                    4.- La carta (D) representa el estado de su energía sexual y creativa.<br>
+                    5.- La carta (E) representa el estado de su energía material.
+                </p> 
+            </div>
+            <div class="tirada-img">
+                <img src="./assets/mundo.png" alt="Tirada de tarot del mundo">
+            </div>
+        </div>
+    </section>
+    <a href="#home"><img class="paRiba" src="./assets/subir-01.png" alt=""></a>
+    <!-- Fin del Contenido -->
     <script src="js/extra.js"></script>
     <script src="js/jquery.slim.min.js"></script>
     <script src="js/popper.min.js"></script>

@@ -1,3 +1,11 @@
+@charset "UTF-8";
+/*
+Trate de dejar cada sección separada dentro del archivo,
+sin embargo esto afecto terriblemente el funcionamiento 
+de la pagina, por lo que, aunque el archivo este separado
+en varias secciones comentadas esto no implica que el 100% del
+contenido este dentro de ellas.
+*/
 * {
   box-sizing: border-box;
   margin: 0px;
@@ -18,6 +26,18 @@ body::-webkit-scrollbar-track {
   background: black;
 }
 
+.paRiba {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 10;
+}
+
+/* ======================= Banner ====================*/
 .toggle {
   position: fixed;
   top: 30px;
@@ -99,11 +119,24 @@ section.testimonio {
 .logoText {
   position: absolute;
   top: 40px;
+  left: 70px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  background-color: #333;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.logoMazo {
+  position: relative;
+  width: fit-content;
+  top: 40px;
   left: 100px;
   font-size: 1.2rem;
   letter-spacing: 1px;
   background-color: #333;
   color: #fff;
+  margin-bottom: revert;
   text-transform: uppercase;
 }
 
@@ -181,6 +214,7 @@ p {
   color: #8DB9E2;
 }
 
+/*============================ Fin de Banner========================== */
 .titulo {
   width: 100%;
   text-align: center;
@@ -246,23 +280,36 @@ p {
   box-sizing: border-box;
   margin: 20px 10px;
 }
+.testimonio .caja h2 {
+  color: #A288E3;
+}
+.testimonio .caja h3 {
+  margin-top: -45px;
+  color: #6d6c6d;
+  position: absolute;
+}
 .testimonio .Foto {
-  height: 350px;
+  top: 80px;
+  position: absolute;
+  width: 150px;
+  height: 150px;
   max-height: 100%;
   max-width: 100%;
+  border-radius: 50%;
 }
 .testimonio .detalles {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 300px;
+  height: 40%;
 }
 .testimonio .detalles p {
   font-family: calibri;
   font-weight: bold;
   color: #6a6a74;
-  text-align: center;
-  margin-top: 20px;
+  text-align: justify;
+  margin-top: -60px;
 }
 .testimonio .Mary {
   color: #A288E3;
@@ -287,12 +334,23 @@ p {
 .testimonio .caja:hover .detalles p {
   color: #fffceb;
 }
+.testimonio .caja:hover h3 {
+  color: #5BC2C1;
+}
+.testimonio .caja:hover .Foto {
+  top: 60px;
+  position: absolute;
+}
 
-/* .carousel-item{
-    margin-right: auto;
-} */
+/* ============================= Fin de Testimonio ====================== */
+/* ============================= Conóceme ======================== */
 .sobre-us {
   background: #38023B;
+}
+.sobre-us > p {
+  color: #c9f0f5;
+  font-weight: 300;
+  font-style: italic;
 }
 
 .sobre-us .contenido {
@@ -308,6 +366,7 @@ p {
 
 .sobre-us .contenido .cjdtexto p {
   color: #5BC2C1;
+  text-align: justify;
 }
 
 .sobre-us .contenido .cjdimg {
@@ -319,31 +378,14 @@ p {
   min-height: 100%;
 }
 
-.swiper-container {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+.sobre-us .contenido .tirada-img img {
+  width: 500px;
+  min-height: 100%;
+  padding: 50px;
 }
 
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-  background-color: #fff;
-}
-
-.cabecera-inicial {
-  background: url("../assets/imagen1.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-color: blue;
-  height: 100vh;
-}
-
-.wrap {
-  height: auto;
-  background-color: wheat;
+.card {
+  border: solid 2px wheat;
 }
 
 .card-footer {
@@ -365,7 +407,78 @@ section.contacto {
   min-height: 100vh;
   background: #333;
 }
+section.contacto .titulo.blanco h2, section.contacto .titulo.blanco p {
+  color: #5BC2C1;
+}
+section.contacto .titulo h2::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 6px;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #5BC2C1;
+}
 
+.tdTarot {
+  background-color: #38023B;
+}
+.tdTarot .titulo.blanco h2, .tdTarot .titulo.blanco p {
+  color: #5BC2C1;
+}
+.tdTarot .titulo h2::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 6px;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #5BC2C1;
+}
+
+.sobre-us.eleccion {
+  background-color: #5BC2C1;
+}
+.sobre-us.eleccion .titulo.blanco h2, .sobre-us.eleccion .titulo.blanco p {
+  color: #38023B;
+}
+.sobre-us.eleccion .titulo h2::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 6px;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #38023B;
+}
+.sobre-us.eleccion .contenido .cjdtexto p {
+  color: #38023B;
+}
+
+/* .tdTarot .contenido {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.tdTarot .contenido .cjdtexto{
+    min-width: 49%;
+    width: 49%;
+}
+.tdTarot .contenido .cjdtexto p{
+    display: block;
+    color: #5BC2C1;
+    text-align: justify;
+}
+.tdTarot .contenido .cjdimg{
+    margin-left: 40px;
+}
+.tdTarot .contenido .cjdimg img{
+    min-width: 100%;
+    height: 160px; 
+} */
 .tabla {
   width: 80%;
   padding: 20px;
@@ -379,10 +492,10 @@ section.contacto {
 }
 
 .tabla .row100 {
+  margin-top: 70px;
   position: relative;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat auto-fit, minmax(300px, 1fr);
 }
 
 .tabla .row100 .col {
@@ -496,22 +609,8 @@ input:hover[type=submit] {
   margin-bottom: 2rem;
 }
 
-.contenedor {
-  flex-wrap: wrap;
-  margin: 3rem;
-  height: 100vh;
-  font-family: monospace;
-  overflow: hidden;
-}
-.contenedor > * {
-  padding: 50px;
-}
-.contenedor p {
-  size: 2rem;
-  justify-content: space-around;
-  padding: 1rem;
-  margin-top: 10px;
-  margin-right: 50px;
+.container.row {
+  padding-top: 2rem;
 }
 
 .forma {
@@ -531,87 +630,165 @@ input:hover[type=submit] {
 
 footer {
   bottom: 0;
+  width: 100%;
 }
 
-@media (max-width: 375px) {
-  .cabecera-inicial {
-    background: url("https://placekitten.com/320/660");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-color: blue;
-    height: 100vh;
+.carousel {
+  width: 400px;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  margin-right: 49%;
+}
+
+.card-title a {
+  color: #A288E3;
+}
+
+.card-title:hover a {
+  color: #8DB9E2;
+}
+
+.articulo {
+  padding-top: 50px;
+  margin: auto;
+  text-align: justify;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.articulo h1, .articulo h2, .articulo h3, .articulo h4, .articulo h5, .articulo h6 {
+  text-align: left;
+}
+.articulo h1, .articulo p {
+  width: 70%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.articulo h4 {
+  color: #333;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+.articulo h4 span {
+  color: #8DB9E2;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.topeArticulo {
+  margin-top: -100px;
+}
+.topeArticulo h6 {
+  font-weight: 300;
+}
+.topeArticulo i {
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.topeArticulo hr {
+  margin-top: -0.9rem;
+}
+
+/* ================== Media Query ======================== */
+@media (max-width: 319px) {
+  .toggle {
+    right: 20px;
   }
 
-  .contenedor {
-    margin: 0rem;
+  .sidebar {
+    width: 100%;
   }
-  .contenedor > * {
-    padding: 20px;
+
+  .articulo {
+    padding: 5px;
   }
-  .contenedor p {
-    margin: 0px;
-    size: 2rem;
-    justify-content: space-around;
-    padding: 0.5rem;
+
+  section.testimonio {
+    padding: 60px;
+  }
+}
+@media (min-width: 320px) and (max-width: 376px) {
+  .toggle {
+    right: 20px;
+  }
+
+  section.testimonio {
+    padding: 60px;
   }
 
   .container {
     justify-content: center;
   }
-}
-@media (min-width: 320px) {
+
+  .articulo.cjdcontenido .logoText {
+    font-size: 2em;
+  }
+
   .sidebar {
-    width: calc(100% - 100px);
+    width: 100%;
+  }
+
+  .logoMazo {
+    left: 10px;
   }
 }
-@media (max-width: 376px) {
+@media (min-width: 377px) and (max-width: 576px) {
+  .container, .container-sm {
+    max-width: 540px;
+    justify-content: center;
+  }
+
+  .articulo.cjdcontenido .logoText {
+    font-size: 2em;
+  }
+
   .sidebar {
-    width: calc(100% - 180px);
+    width: 100%;
   }
 
-  .contenedor {
-    margin: 0rem;
-  }
-  .contenedor > * {
-    padding: 20px;
-  }
-  .contenedor p {
-    margin: 0px;
-    size: 2rem;
-    justify-content: space-around;
-    padding: 0.5rem;
-  }
-
-  .container {
-    justify-content: space-around;
+  .logoMazo {
+    left: 10px;
   }
 }
-@media (min-width: 769px) {
-  .sidebar {
-    width: calc(100% - 280px);
+@media (max-width: 577px) {
+  section.testimonio {
+    padding: 60px;
   }
 
-  .contenedor {
-    margin: 0rem;
-  }
-  .contenedor > * {
-    padding: 20px;
-  }
-  .contenedor p {
-    margin: 0px;
-    size: 2rem;
-    justify-content: space-around;
-    padding: 0.5rem;
+  .carousel {
+    width: 300px;
   }
 
-  .container {
-    justify-content: space-around;
+  .testimonio .caja {
+    width: 85%;
+  }
+
+  .testimonio .Foto {
+    display: none;
+  }
+
+  .testimonio .detalles {
+    width: 80%;
+    height: 70%;
+  }
+
+  .tabla .row100 {
+    margin-top: 20px;
   }
 }
-@media (max-width: 720px) {
+@media (min-width: 577px) and (max-width: 720px) {
   .caja {
     width: 94%;
     height: 500px;
+  }
+
+  .articulo.cjdcontenido .logoText {
+    font-size: 2em;
   }
 
   .Foto {
@@ -622,14 +799,35 @@ footer {
     font-size: 16px;
     width: 250px;
   }
+
+  .sidebar {
+    width: 100%;
+  }
 }
-@media (max-width: 991px) {
-  .banner .imgsidebar {
-    display: none;
+@media (min-width: 721px) and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
   }
 
-  .banner .cjdcontenido, .sidebar {
-    width: 100%;
+  .articulo.cjdcontenido .logoText {
+    font-size: 2em;
+  }
+
+  .container, .container-md {
+    justify-content: center;
+    justify-content: space-around;
+    min-width: 720px;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .container, .container-sm,
+.container-md, .container-lg {
+    max-width: 960px;
+    justify-content: center;
+  }
+
+  .toggle {
+    right: 40px;
   }
 
   .logoText {
@@ -659,13 +857,106 @@ footer {
     margin-left: 0;
   }
 }
-@media (min-width: 1025px) {
+@media (max-width: 991px) {
+  .articulo.cjdcontenido .logoText {
+    font-size: 2em;
+  }
+
+  section.contacto {
+    padding: 0;
+  }
+
+  section.tdTarot {
+    padding: 40px;
+  }
+
+  .banner {
+    min-width: 100%;
+  }
+
+  .banner .imgsidebar {
+    display: none;
+  }
+
+  .banner .cjdcontenido, .sidebar {
+    width: 100%;
+    padding: 40px;
+  }
+
+  .logoText {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    text-align: justify;
+  }
+
+  section.sobre-us {
+    padding: 40px;
+  }
+
+  .sobre-us .contenido {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0px;
+    flex-direction: column;
+  }
+
+  .sobre-us .contenido .cjdtexto {
+    min-width: 100%;
+    width: 100%;
+  }
+
+  .sobre-us .contenido .cjdimg img {
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  .tdTarot .contenido .cjdimg img {
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  .tirada-img img {
+    margin-left: 0px;
+    width: 90%;
+  }
+}
+@media (min-width: 1005px) and (max-width: 1070px) {
   .container {
     justify-content: space-around;
   }
+
+  .tirada-img img {
+    margin-left: 0px;
+    width: 90%;
+  }
+
+  .sobre-us .contenido .cjdimg img {
+    margin-left: 0px;
+  }
+
+  .tdTarot .contenido .cjdimg img {
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  .sobre-us.eleccion .contenido .cjdimg {
+    margin-left: 0px;
+    width: 35%;
+  }
+
+  .sobre-us .contenido .cjdimg img {
+    width: 450px;
+    min-height: 85%;
+  }
 }
 @media (min-width: 1201px) {
-  .container {
+  .container, .container-sm, .container-md, .container-lg {
     justify-content: space-around;
+    min-width: 1160px;
+  }
+
+  footer {
+    position: static;
   }
 }
